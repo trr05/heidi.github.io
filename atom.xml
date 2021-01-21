@@ -3,11 +3,11 @@
   <title>Little Star</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://trr05.github.io/blog/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://trr05.github.io/blog/"/>
   <updated>2021-01-20T11:58:11.704Z</updated>
-  <id>http://example.com/</id>
+  <id>https://trr05.github.io/blog/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,25 +18,25 @@
   
   <entry>
     <title>myFirstBlog</title>
-    <link href="http://example.com/2021/01/20/myFirstBlog/"/>
-    <id>http://example.com/2021/01/20/myFirstBlog/</id>
+    <link href="https://trr05.github.io/blog/2021/01/20/myFirstBlog/"/>
+    <id>https://trr05.github.io/blog/2021/01/20/myFirstBlog/</id>
     <published>2021-01-20T11:54:40.000Z</published>
     <updated>2021-01-20T11:58:11.704Z</updated>
     
     
     
     
-    <category term="分类1" scheme="http://example.com/categories/%E5%88%86%E7%B1%BB1/"/>
+    <category term="分类1" scheme="https://trr05.github.io/blog/categories/%E5%88%86%E7%B1%BB1/"/>
     
     
-    <category term="-Tag1" scheme="http://example.com/tags/Tag1/"/>
+    <category term="-Tag1" scheme="https://trr05.github.io/blog/tags/Tag1/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2021/01/20/hello-world/"/>
-    <id>http://example.com/2021/01/20/hello-world/</id>
+    <link href="https://trr05.github.io/blog/2021/01/20/hello-world/"/>
+    <id>https://trr05.github.io/blog/2021/01/20/hello-world/</id>
     <published>2021-01-20T11:28:50.009Z</published>
     <updated>2021-01-20T11:28:50.009Z</updated>
     
