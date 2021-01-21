@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>月岛雯</title>
   
-  
+  <subtitle>月岛雯&amp;圣司</subtitle>
   <link href="https://trr05.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://trr05.github.io/blog/"/>
@@ -10,7 +10,7 @@
   <id>https://trr05.github.io/blog/</id>
   
   <author>
-    <name>Heidi</name>
+    <name>heidi</name>
     
   </author>
   
