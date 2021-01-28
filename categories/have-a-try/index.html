@@ -9,7 +9,7 @@
     
     <title>
         
-            容器系列之虚拟机和容器的区别 |
+            Category: have a try |
         
         田小年&#39;s blog
     </title>
@@ -64,7 +64,7 @@
                             <a class=""
                                href="/blog/"
                             >
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -72,15 +72,15 @@
                             <a class=""
                                href="/blog/archives"
                             >
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
                         <li class="menu-item">
-                            <a class=""
+                            <a class="active"
                                href="/blog/categories"
                             >
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -88,7 +88,7 @@
                             <a class=""
                                href="/blog/tags"
                             >
-                                标签
+                                TAGS
                             </a>
                         </li>
                     
@@ -96,7 +96,7 @@
                             <a class=""
                                href="/blog/about"
                             >
-                                关于
+                                ABOUT
                             </a>
                         </li>
                     
@@ -123,27 +123,27 @@
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/blog/">首页</a>
+                       href="/blog/">HOME</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/blog/archives">归档</a>
+                       href="/blog/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/blog/categories">CATEGORIES</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/blog/categories">分类</a>
+                       href="/blog/tags">TAGS</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/blog/tags">标签</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/blog/about">关于</a>
+                       href="/blog/about">ABOUT</a>
                 </li>
             
         </ul>
@@ -162,80 +162,42 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="article-content-container">
-
-        <div class="article-title">
-            <span class="title-hover-animation">容器系列之虚拟机和容器的区别</span>
+    <div class="category-container">
+        <div class="category-name">
+            <i class="fas fa-folder"></i> have a try (1)
         </div>
-
-        
-            <div class="article-header">
-                <div class="avatar">
-                    <img src="/blog/images/avatar.svg">
-                </div>
-                <div class="info">
-                    <div class="author">
-                        <span>Heidi</span>
-                        <span class="level">Lv1</span>
-                    </div>
-                    <div class="meta-info">
-                        <div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i> 2021-01-28 10:15:25
-    </span>
+        <div class="category-post-list">
+            
+<div class="archive-list-container">
     
-    
-
-    
-    
-    
-    
-        <span class="article-pv article-meta-item">
-            <i class="fas fa-eye"></i> <span id="busuanzi_value_page_pv"></span>
-        </span>
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2021</span>
+                <span class="archive-year-post-count">(1)</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/blog/2021/01/20/myFirstBlog/"
+                        >myFirstBlog</a>
+                        <span class="article-date">01-20</span>
+                    </li>
+                
+            </ul>
+        </section>
     
 </div>
 
-                    </div>
-                </div>
-            </div>
-        
-
-        <div class="article-content markdown-body">
-            <h4 id="虚拟机和容器的对比图"><a href="#虚拟机和容器的对比图" class="headerlink" title="虚拟机和容器的对比图"></a>虚拟机和容器的对比图</h4><p><img src="../images/vm.png"></p>
-<h5 id="这幅图左边—虚拟机的原理"><a href="#这幅图左边—虚拟机的原理" class="headerlink" title="这幅图左边—虚拟机的原理"></a>这幅图左边—虚拟机的原理</h5><p>Hypervisor：虚拟机监控器，是一个用于创建和运行虚拟机的进程</p>
-<p><strong>一台主机计算机可通过虚拟化的方式共享其资源(如内存和处理资源)来支持多台客户机虚拟机，它在这些虚拟的硬件上安装了一个新的操作系统，即Guest OS</strong></p>
-<p>用户进程可以运行在这个虚拟的机器中 ，它能看到的自然也只有Guest O的文件和目录，以及这个机器里的虚拟设备</p>
-<h5 id="右边这幅图—Docker-Engine-替换了Hypervisor"><a href="#右边这幅图—Docker-Engine-替换了Hypervisor" class="headerlink" title="右边这幅图—Docker Engine 替换了Hypervisor"></a>右边这幅图—Docker Engine 替换了Hypervisor</h5><p><strong>在使用Docker的时候，并没有一个真正的”Docker容器“运行在宿主机里面，Docker项目帮助用户启动的，还是原来的应用进程，只不过在创建这些进程时，Docker为它们加上了各种各样的Namespace参数</strong></p>
-<p>这时，这些进程就会觉得自己是各自PID Namespace里的第1号进程，只能看到各自Mount Namespace里挂载的目录和文件，只能访问到给咱Network namesapce里的网络设备，就仿佛运行在一个个”容器“里面，与世隔绝</p>
-
         </div>
+    </div>
+    <div class="category-paginator">
+        <div class="paginator">
+    
 
-        
+    
+</div>
 
-        
-            <div class="article-nav">
-                
-                
-                    <div class="article-next">
-                        <a class="next"
-                           rel="next"
-                           href="/blog/2021/01/20/myFirstBlog/"
-                        >
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">myFirstBlog</span>
-                                <span class="post-nav-item">下一篇</span>
-                            </span>
-                            <span class="right arrow-icon flex-center">
-                              <i class="fas fa-chevron-right"></i>
-                            </span>
-                        </a>
-                    </div>
-                
-            </div>
-        
-
-        
     </div>
 </div>
 
@@ -260,18 +222,18 @@
             <div class="website-count info-item">
                 
                     <span id="busuanzi_container_site_uv">
-                        访问人数 <span id="busuanzi_value_site_uv"></span>&ensp;
+                        Visitor Count <span id="busuanzi_value_site_uv"></span>&ensp;
                     </span>
                 
                 
                     <span id="busuanzi_container_site_pv">
-                        总访问量 <span id="busuanzi_value_site_pv"></span>
+                        Totalview <span id="busuanzi_value_site_pv"></span>
                     </span>
                 
             </div>
         
         <div class="theme-info info-item">
-            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动 | 主题 <a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.3.0</a>
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a> | Theme <a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.3.0</a>
         </div>
     </div>
 </footer>
@@ -279,19 +241,6 @@
         </div>
     </div>
 
-    
-        <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="tools-list">
-        <!-- TOC aside toggle -->
-        
-
-        <!-- go comment -->
-        
-    </ul>
-</div>
-
-        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -356,7 +305,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="搜索..."
+                       placeholder="Search..."
                        spellcheck="false"
                        type="search"
                        class="search-input"

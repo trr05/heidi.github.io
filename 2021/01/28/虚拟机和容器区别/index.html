@@ -9,7 +9,7 @@
     
     <title>
         
-            About |
+            虚拟机&amp;容器对比 |
         
         田小年&#39;s blog
     </title>
@@ -93,7 +93,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/blog/about"
                             >
                                 ABOUT
@@ -142,7 +142,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/blog/about">ABOUT</a>
                 </li>
             
@@ -162,18 +162,100 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="empty-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">虚拟机&amp;容器对比</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/blog/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span>Heidi</span>
+                        <span class="level">Lv1</span>
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i> 2021-01-28 10:15:25
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/blog/tags/%E5%AE%B9%E5%99%A8%E7%B3%BB%E5%88%97/">容器系列</a>
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i> <span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h4 id="虚拟机和容器的对比图"><a href="#虚拟机和容器的对比图" class="headerlink" title="虚拟机和容器的对比图"></a>虚拟机和容器的对比图</h4><p><img src="/blog/images/vm.png"></p>
+<h6 id="图左—虚拟机的原理"><a href="#图左—虚拟机的原理" class="headerlink" title="图左—虚拟机的原理"></a>图左—虚拟机的原理</h6><p>Hypervisor：虚拟机监控器，是一个用于创建和运行虚拟机的进程</p>
+<p><strong>一台主机计算机可通过虚拟化的方式共享其资源(如内存和处理资源)来支持多台客户机虚拟机，它在这些虚拟的硬件上安装了一个新的操作系统，即Guest OS</strong></p>
+<p>用户进程可以运行在这个虚拟的机器中 ，它能看到的自然也只有Guest OS的文件和目录，以及这个机器里的虚拟设备</p>
+<h6 id="图右—容器原理"><a href="#图右—容器原理" class="headerlink" title="图右—容器原理"></a>图右—容器原理</h6><p>用户运行在容器里的应用进程，跟宿主机上的其他进程一样，都由宿主机操作系统统一管理，只不过这些被隔离的进程拥有额外设置过的Namespace参数，而Docker Engine在这里扮演的角色，更多是旁路式的辅助和管理工作</p>
+<h5 id="为什么Docker项目比虚拟机更受欢迎"><a href="#为什么Docker项目比虚拟机更受欢迎" class="headerlink" title="为什么Docker项目比虚拟机更受欢迎"></a>为什么Docker项目比虚拟机更受欢迎</h5><ol>
+<li><p>使用虚拟化技术作为应用沙盒，就必须要由Hypervisor来负责创建虚拟机，这个虚拟机是真实存在的，并且它里面必须运行着一个完整的Guest OS才能执行用户的应用进程，这就不可避免地带来了额外的资源消耗和占用</p>
+</li>
+<li><p>用户应用运行在虚拟机里面，它对宿主机操作系统的调用就不可避免地要经过虚拟化软件的拦截和处理，这本身就是一层性能消耗，尤其是计算资源、网络和磁盘I/O的损耗非常大</p>
+</li>
+<li><p>相比之下，容器化后的用户应用，却依然还是一个宿主机的普通进程，这就意味着因为虚拟化而带来的性能损耗都是不存在的<br>此外，使用Namespace作为隔离手段的容器不需要单独的Guest OS，这就使得容器额外的资源占用几乎可以忽略不计</p>
+</li>
+<li><p>但Docker也存在不足之处-隔离得不彻底，既然容器只是运行在宿主机上的一种特殊的进程，那么多个容器之间使用的就还是同一个宿主机的操作系统的内核；其次，在Linux内核中 ，有很多资源和对象是不能被Namesapce化的，比如时间</p>
+</li>
+</ol>
+
+        </div>
 
         
 
-        <div class="empty-page-content markdown-body">
-            
-                <h1>about</h1>
-            
-        </div>
-        <div class="empty-page-comments">
-            
-        </div>
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/blog/2021/01/20/myFirstBlog/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">myFirstBlog</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
     </div>
 </div>
 
@@ -217,6 +299,19 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
