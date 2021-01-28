@@ -9,7 +9,7 @@
     
     <title>
         
-            关于 |
+            容器系列之虚拟机和容器的区别 |
         
         田小年&#39;s blog
     </title>
@@ -93,7 +93,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/blog/about"
                             >
                                 关于
@@ -142,7 +142,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/blog/about">关于</a>
                 </li>
             
@@ -162,18 +162,80 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="empty-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">容器系列之虚拟机和容器的区别</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/blog/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span>Heidi</span>
+                        <span class="level">Lv1</span>
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i> 2021-01-28 10:15:25
+    </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i> <span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h4 id="虚拟机和容器的对比图"><a href="#虚拟机和容器的对比图" class="headerlink" title="虚拟机和容器的对比图"></a>虚拟机和容器的对比图</h4><p><img src="../images/vm.png"></p>
+<h5 id="这幅图左边—虚拟机的原理"><a href="#这幅图左边—虚拟机的原理" class="headerlink" title="这幅图左边—虚拟机的原理"></a>这幅图左边—虚拟机的原理</h5><p>Hypervisor：虚拟机监控器，是一个用于创建和运行虚拟机的进程</p>
+<p><strong>一台主机计算机可通过虚拟化的方式共享其资源(如内存和处理资源)来支持多台客户机虚拟机，它在这些虚拟的硬件上安装了一个新的操作系统，即Guest OS</strong></p>
+<p>用户进程可以运行在这个虚拟的机器中 ，它能看到的自然也只有Guest O的文件和目录，以及这个机器里的虚拟设备</p>
+<h5 id="右边这幅图—Docker-Engine-替换了Hypervisor"><a href="#右边这幅图—Docker-Engine-替换了Hypervisor" class="headerlink" title="右边这幅图—Docker Engine 替换了Hypervisor"></a>右边这幅图—Docker Engine 替换了Hypervisor</h5><p><strong>在使用Docker的时候，并没有一个真正的”Docker容器“运行在宿主机里面，Docker项目帮助用户启动的，还是原来的应用进程，只不过在创建这些进程时，Docker为它们加上了各种各样的Namespace参数</strong></p>
+<p>这时，这些进程就会觉得自己是各自PID Namespace里的第1号进程，只能看到各自Mount Namespace里挂载的目录和文件，只能访问到给咱Network namesapce里的网络设备，就仿佛运行在一个个”容器“里面，与世隔绝</p>
+
+        </div>
 
         
 
-        <div class="empty-page-content markdown-body">
-            
-                <h1>about</h1>
-            
-        </div>
-        <div class="empty-page-comments">
-            
-        </div>
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/blog/2021/01/20/myFirstBlog/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">myFirstBlog</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
     </div>
 </div>
 
@@ -217,6 +279,19 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">

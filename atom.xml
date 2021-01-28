@@ -6,7 +6,7 @@
   <link href="https://trr05.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://trr05.github.io/blog/"/>
-  <updated>2021-01-21T08:40:23.503Z</updated>
+  <updated>2021-01-28T03:09:28.471Z</updated>
   <id>https://trr05.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>容器系列之虚拟机和容器的区别</title>
+    <link href="https://trr05.github.io/blog/2021/01/28/%E3%80%90%E5%AE%B9%E5%99%A8%E7%B3%BB%E5%88%97%E3%80%91%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%92%8C%E5%AE%B9%E5%99%A8%E5%8C%BA%E5%88%AB/"/>
+    <id>https://trr05.github.io/blog/2021/01/28/%E3%80%90%E5%AE%B9%E5%99%A8%E7%B3%BB%E5%88%97%E3%80%91%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%92%8C%E5%AE%B9%E5%99%A8%E5%8C%BA%E5%88%AB/</id>
+    <published>2021-01-28T02:15:25.000Z</published>
+    <updated>2021-01-28T03:09:28.471Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="虚拟机和容器的对比图"><a href="#虚拟机和容器的对比图" class="headerlink" title="虚拟机和容器的对比图"></a>虚拟机和容器的对比图</h4><p><img src="../images/vm.png"></p><h5 id="这幅图左边—虚拟机的原理"><a href="#这幅图左边—虚拟机的原理" class="headerlink" title="这幅图左边—虚拟机的原理"></a>这幅图左边—虚拟机的原理</h5><p>Hypervisor：虚拟机监控器，是一个用于创建和运行虚拟机的进程</p><p><strong>一台主机计算机可通过虚拟化的方式共享其资源(如内存和处理资源)来支持多台客户机虚拟机，它在这些虚拟的硬件上安装了一个新的操作系统，即Guest OS</strong></p><p>用户进程可以运行在这个虚拟的机器中 ，它能看到的自然也只有Guest O的文件和目录，以及这个机器里的虚拟设备</p><h5 id="右边这幅图—Docker-Engine-替换了Hypervisor"><a href="#右边这幅图—Docker-Engine-替换了Hypervisor" class="headerlink" title="右边这幅图—Docker Engine 替换了Hypervisor"></a>右边这幅图—Docker Engine 替换了Hypervisor</h5><p><strong>在使用Docker的时候，并没有一个真正的”Docker容器“运行在宿主机里面，Docker项目帮助用户启动的，还是原来的应用进程，只不过在创建这些进程时，Docker为它们加上了各种各样的Namespace参数</strong></p><p>这时，这些进程就会觉得自己是各自PID Namespace里的第1号进程，只能看到各自Mount Namespace里挂载的目录和文件，只能访问到给咱Network namesapce里的网络设备，就仿佛运行在一个个”容器“里面，与世隔绝</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;虚拟机和容器的对比图&quot;&gt;&lt;a href=&quot;#虚拟机和容器的对比图&quot; class=&quot;headerlink&quot; title=&quot;虚拟机和容器的对比图&quot;&gt;&lt;/a&gt;虚拟机和容器的对比图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;../images/vm.png&quot;&gt;&lt;/p&gt;
+&lt;h5 i</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>myFirstBlog</title>
