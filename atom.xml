@@ -6,7 +6,7 @@
   <link href="https://trr05.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://trr05.github.io/blog/"/>
-  <updated>2021-03-09T11:49:49.896Z</updated>
+  <updated>2021-03-09T11:54:01.565Z</updated>
   <id>https://trr05.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Git工具-子模块</title>
+    <title>Git工具.gitmodules</title>
     <link href="https://trr05.github.io/blog/2021/03/09/Git%E5%B7%A5%E5%85%B7-.gitmodules/"/>
     <id>https://trr05.github.io/blog/2021/03/09/Git%E5%B7%A5%E5%85%B7-.gitmodules/</id>
     <published>2021-03-09T08:09:48.000Z</published>
-    <updated>2021-03-09T11:49:49.896Z</updated>
+    <updated>2021-03-09T11:54:01.565Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>我们在项目目录中有时可能会见到这种文件.gitmodules<br>这个文件的应用场景：<br>某个工作中的项目需要包含并使用另一个项目，但又想两个项目同时独立</p></blockquote><h3 id="如何将一个项目作为另一个项目的子模块提交上去呢？"><a href="#如何将一个项目作为另一个项目的子模块提交上去呢？" class="headerlink" title="如何将一个项目作为另一个项目的子模块提交上去呢？"></a>如何将一个项目作为另一个项目的子模块提交上去呢？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add 子模块的url</span><br></pre></td></tr></table></figure><p>默认情况下 ，子模块会将子项目放到一个与仓库同名的目录中</p><h3 id="克隆含有子模块的项目"><a href="#克隆含有子模块的项目" class="headerlink" title="克隆含有子模块的项目"></a>克隆含有子模块的项目</h3><p>按照正常的拉取代码的形式， 拉取下来的项目默认会包含子模块目录，但是目录内容为空<br>两种方式：</p><ol><li>运行两个命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git submodule init 用来初始化本地配置文件</span><br><span class="line">git submodule update 从该项目中抓取所有数据并检出父项目中列出的合适的提交</span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li>git clone命令传递–recurse-submodules 选项，它就会自动初始化并更新仓库中的每一个子模块，包括可能存在的嵌套子模块</li></ol><p>如果已经克隆了项目，但是忘记了–recurse-submodules，那么可以运行git submodule update –init将以上两个命令合并成一步。如果还要初始化、抓取并检出任何嵌套的子模块，可以使用git submodule update –init –recursive</p><h3 id="在包含子模块的项目上工作"><a href="#在包含子模块的项目上工作" class="headerlink" title="在包含子模块的项目上工作"></a>在包含子模块的项目上工作</h3><p>更新子模块：git submodule update –remote 子模块名字<br>加上子模块的名字可以更新固定的模块</p><h3 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h3><p>可以让Git在推送到主项目前检查所有子模块是否已推送<br>git push –recurse-submodules=check<br>如果任何提交的子模块改动没有推送那么“check“选项会直接使push操作失败<br>失败之后如何做？<br>进入到每一个子模块中然后手动推送到远程仓库，之后再次尝试这次推送</p>]]></content>
     
