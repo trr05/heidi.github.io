@@ -106,4 +106,4 @@ theme: keep
 deploy:
   type: git
   repo: https://github.com/trr05/blog.git
-  branch: main
+  branch: gh-pages
