@@ -1,0 +1,21 @@
+if (hexo-config('comment.valine.enable')) {
+  @require "./valine.styl";
+
+} else if (hexo-config('comment.gitalk.enable')) {
+  @require "./gitalk.styl";
+
+} else if (hexo-config('comment.twikoo.enable')) {
+  @require "./twikoo.styl";
+
+}
+
+.comments-container {
+  display: inline-block;
+  margin-top: $component-spacing-value;
+  width: 100%;
+
+  #comment-anchor {
+    width: 100%;
+    height: 10px;
+  }
+}
